@@ -11,10 +11,10 @@ const PORT = 3000;
 const MONGO_URI = process.env.MONGO_URI;
 
 app.use(cors({
-    // origin: 'https://<your-netlify-domain>.netlify.app',
-    origin: 'https://localhost:5173',
+    origin: 'https://storied-marzipan-b0aa35.netlify.app',
+    // origin: 'http://localhost:5173',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    // allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
     optionsSuccessStatus: 204,
   }));
