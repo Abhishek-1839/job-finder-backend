@@ -14,7 +14,9 @@ app.use(cors({
     // origin: 'https://<your-netlify-domain>.netlify.app',
     origin: 'https://localhost:5173',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    credentials: true, // If you need to send cookies or authentication headers
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+    optionsSuccessStatus: 204,
   }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
